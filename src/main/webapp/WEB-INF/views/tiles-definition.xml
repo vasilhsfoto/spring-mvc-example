@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+
+	<!-- template tiles definition follows -->
+	<definition name="template-loginform" template="/WEB-INF/views/main_template.jsp">
+		<put-attribute name="primary-content" value=""/>
+		<put-attribute name="login-form" value="/WEB-INF/views/loginform.jsp"/>
+		<put-attribute name="footer" value="/WEB-INF/views/footer.jsp"/>
+	</definition>
+
+	<!-- concrete tiles-pages follows -->
+	<definition name="home-tile" extends="template-loginform">
+		<put-attribute name="primary-content" value="/WEB-INF/views/home.jsp"/>
+	</definition>
+
+	<definition name="display-twitter-form" extends="template-loginform">
+		<put-attribute name="primary-content" value="/WEB-INF/views/create-twitter-form.jsp"></put-attribute>
+	</definition>
+
+</tiles-definitions>
